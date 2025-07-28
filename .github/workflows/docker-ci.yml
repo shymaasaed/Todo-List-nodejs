@@ -10,7 +10,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: shymaasaeed404/todo-list-nodej
 
 jobs:
   build-and-push:
