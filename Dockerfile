@@ -5,4 +5,4 @@ RUN npm install
 COPY . .
 EXPOSE 4000
 ENV NODE_ENV=production
-CMD [ "node", "app.js" ]
+CMD [ "node", "index.js" ]
