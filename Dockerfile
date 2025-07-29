@@ -1,8 +1,9 @@
 FROM node:18-alpine
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 8000
-ENV NODE_ENV=production
-CMD [ "node", "index.js" ]
+ARG MONGO_URI
+ENV MONGO_URI=$MONGO_URI
+CMD ["npm", "start"]
