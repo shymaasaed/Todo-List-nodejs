@@ -10,7 +10,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: shymaasaeed404/todo-list-nodejs
+  IMAGE_NAME: shymaasaeed404/todo-list-nodejs:main
 
 jobs:
   build-and-push:
