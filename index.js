@@ -1,8 +1,8 @@
 const express = require('express');
 const port = 4000;
 const path = require('path');
-//this line just to check that  watch tower works 
-//hello its sheen 
+//this line just to check that  watch tower works
+//hello its sheen - just virifing watchtour
 // require the mongoose file
 const db = require('./config/mongoose');
 const User = require('./models/register');
