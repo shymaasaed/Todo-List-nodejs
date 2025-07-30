@@ -277,11 +277,7 @@ This file stores environment-specific variables, like the MONGO_URI, that are cr
 
 ---
 
-## ✅ Project Status
-
-* ✅ CI/CD pipeline tested and working
-* ✅ EC2 deployment confirmed
-* ✅ Docker image builds and runs correctly
-* ✅ Watchtower successfully performs auto-update
+## 🚀 Deployment Summary:
+## The CI/CD pipeline has been fully tested, with successful deployment to EC2. The Docker image builds and runs without issues, and Watchtower is actively handling automatic updates. 
 
 ---
