@@ -1,6 +1,6 @@
 ### 🧩 Todo List DevOps Project
 
-#This repository documents a full DevOps workflow built around a Node.js Todo application. It includes everything from local testing and Dockerization to CI/CD with GitHub Actions, automated deployment via Ansible to a remote EC2 machine, and auto-updating containers using Watchtower.
+## This repository documents a full DevOps workflow built around a Node.js Todo application. It includes everything from local testing and Dockerization to CI/CD with GitHub Actions, automated deployment via Ansible to a remote EC2 machine, and auto-updating containers using Watchtower.
 
 ---
 ## 📌 Overview
@@ -30,8 +30,9 @@ This project was originally tested locally to ensure functionality before any De
 
 Before starting Dockerization or automation, the app was tested locally with:
 
+```bash cd Todo-List-nodejs npm install npm start ```
 
----
+
 ![Todo](assets/Todo/Picture2.png)
 
 
