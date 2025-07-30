@@ -1,4 +1,3 @@
-```markdown
 # 🚀 CI/CD Enabled Todo List App using Node.js, Docker, GitHub Actions, Ansible & Watchtower
 
 ## 📌 Overview
@@ -220,12 +219,12 @@ An Ansible playbook that automates the setup of a remote server, including Docke
     - name: Run docker-compose up (using docker_compose_v2 module)
       community.docker.docker_compose_v2:
         project_src: "{{ app_dir }}"
-        state: present```
+        state: present
 
+```
 </details>
----
 
-
+----
 ## 📡 Docker-compose file
 docker-compose.yml
 This file defines the multi-container Docker application, orchestrating the todo-app and watchtower services. It sets up how these services run, communicate, and are exposed.
@@ -259,10 +258,10 @@ services:
       - WATCHTOWER_SCHEDULE=0 */5 * * * *         # Check every 5 minutes
       - WATCHTOWER_CLEANUP=true                   # Remove old images after update
       - WATCHTOWER_INCLUDE_STOPPED=true           # Include stopped containers
-    command: shymaasaeed404/todo-list-nodejs:latest```
+    command: shymaasaeed404/todo-list-nodejs:latest
+```
 </details>
 ---
-
 
 ## 🔁 Watchtower Overview
 
