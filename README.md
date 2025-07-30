@@ -223,8 +223,9 @@ An Ansible playbook that automates the setup of a remote server, including Docke
         state: present```
 
 </details>
-
 ---
+
+
 ## 📡 Docker-compose file
 docker-compose.yml
 This file defines the multi-container Docker application, orchestrating the todo-app and watchtower services. It sets up how these services run, communicate, and are exposed.
@@ -260,8 +261,9 @@ services:
       - WATCHTOWER_INCLUDE_STOPPED=true           # Include stopped containers
     command: shymaasaeed404/todo-list-nodejs:latest```
 </details>
-
 ---
+
+
 ## 🔁 Watchtower Overview
 
 Watchtower is included in the `docker-compose.yml` file as a service. It is configured to poll Docker Hub every 5 minutes for changes in the image `shymaasaeed404/todo-list-nodejs`. If an update is found, it gracefully stops the running container and starts the updated one — ensuring zero-downtime deployment.
