@@ -35,6 +35,6 @@ cd Todo-List-nodejs
 npm install
 npm start
 
-![Todo works !](/root/Fortstack/Todo/Picture2.png)
+![Todo works !](Todo-List-nodejs/assets/Todo/Picture2.png)
 
 
