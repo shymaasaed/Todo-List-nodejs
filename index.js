@@ -28,6 +28,7 @@ app.use(express.urlencoded());
 // set up the static files
 app.use(express.static('assets'));
 
+//hello sheen !!
 
 // registering the user in the database
 app.post('/register', (req, res) => {
