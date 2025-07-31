@@ -131,7 +131,7 @@ jobs:
 
 ---
 
-## 🐳 Docker Compose File
+## 🐳 Docker File
 
 <details>
 <summary>🔽 Click to expand: docker-compose.yml</summary>
@@ -235,30 +235,35 @@ This file defines the multi-container Docker application, orchestrating the todo
 ```yaml
 ---
 services:
-  todo-app:
-    image: shymaasaeed404/todo-list-nodejs:latest
-    container_name: todo-app
-    ports:
-      - "8000:8000"
-    environment:
-      - MONGO_URI= {your Data base URl}
-    restart: always
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-  watchtower:
-    image: containrrr/watchtower:latest
-    container_name: watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: always
-    environment:
-      - WATCHTOWER_SCHEDULE=0 */5 * * * *         # Check every 5 minutes
-      - WATCHTOWER_CLEANUP=true                   # Remove old images after update
-      - WATCHTOWER_INCLUDE_STOPPED=true           # Include stopped containers
-    command: shymaasaeed404/todo-list-nodejs:latest
+  todo-app:
+    image: shymaasaeed404/todo-list-nodejs:latest
+    container_name: todo-app
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI={your-DB URL}
+      - NODE_ENV=production
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  watchtower:
+    image: containrrr/watchtower:latest
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ${HOME}/.docker/config.json:/config.json:ro
+    restart: always
+    environment:
+      - WATCHTOWER_SCHEDULE=0 */5 * * * *
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_INCLUDE_STOPPED=true
+      - WATCHTOWER_DEBUG=true
+    command:
+      - todo-app
 ```
 </details>
 ---
