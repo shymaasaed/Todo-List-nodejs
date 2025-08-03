@@ -1,3 +1,4 @@
+console.log("🚨 ENV MONGO_URI:", process.env.MONGO_URI);
 const express = require('express');
 const port = 8000;
 const path = require('path');
